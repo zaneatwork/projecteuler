@@ -10,8 +10,8 @@ def is_palindrome(n):
 
 palindromes = [
     x * y
-    for x in range(999, 100, -1)
-    for y in range(x, 100, -1)
+    for x in range(100, 999)
+    for y in range(x, 999)
     if is_palindrome(x * y)
 ]
 

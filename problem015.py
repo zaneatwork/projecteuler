@@ -5,9 +5,9 @@
 
 from math import factorial
 
-# The formula for the number of contigous routes for a (n*n) square grid is 
-# (2n)! / (n! * n!) 
-# This is also the center of the 2*nth row of pascal's triangle. 
+# The formula for the number of contigous routes for a (n*n) square grid is
+# (2n)! / (n! * n!)
+# This is also the center of the 2*nth row of pascal's triangle.
 # So for 2x2 grid, it would be the middle of the 4th row (6) and so on.
 
-print(factorial(2*20) / (factorial(20) * factorial(20)))
+print(int(factorial(2 * 20) / (factorial(20) * factorial(20))))

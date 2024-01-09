@@ -11,7 +11,7 @@
 
 
 names = []
-with open("data_files/names.txt", "r") as name_file:
+with open("../data_files/names.txt", "r") as name_file:
     names = sorted(
         name_file.read().replace('"', "").replace("\n", "").split(",")
     )

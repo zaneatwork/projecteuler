@@ -1,11 +1,14 @@
-# Project Euler in Python
+Project Euler
+=============
 
-Run tests for all problems in the repo with:
-```
-python tests.py
-```
+A set of practice problems done in multiple languages from 
+[projecteuler.net](https://projecteuler.net).
 
-Run an individual problem with:
-```
-python problem001.py
-```
+Currently there are solutions in:
+- C
+- Python
+
+Each language is split into it's own directory.
+
+`data_files` contains a set of data for problems that is common across 
+languages.

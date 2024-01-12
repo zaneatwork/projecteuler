@@ -5,7 +5,7 @@
 
 int main() {
   int firstTerm = 1, secondTerm = 2;
-  int sum, prevSum;
+  int sum = 0, prevSum = 0;
   int sumOfEvens = 2;
 
   while (prevSum < 4000000) {

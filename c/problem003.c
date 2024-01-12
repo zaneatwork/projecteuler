@@ -4,7 +4,7 @@
 int main() {
   long long n = 600851475143;
 
-  // n is odd so we only need to check for odd factors
+  // n is odd so we only need to check for odd factors up to its square root
   for (long long i = 3; i * i <= n; i += 2) {
     while (n % i == 0) {
       n /= i;
@@ -12,6 +12,5 @@ int main() {
   }
 
   printf("%lld\n", n);
-
   return 0;
 }

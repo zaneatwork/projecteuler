@@ -4,17 +4,14 @@
 #include <stdio.h>
 
 int main() {
-  int firstTerm = 1, secondTerm = 2;
-  int sum = 0, prevSum = 0;
-  int sumOfEvens = 2;
+  int x = 1, y = 2, sumOfEvens = 2;
 
-  while (prevSum < 4000000) {
-    prevSum = sum;
-    sum = firstTerm + secondTerm;
-    firstTerm = secondTerm;
-    secondTerm = sum;
-
-    sumOfEvens += sum % 2 ? 0 : sum;
+  while (y <= 4000000) {
+    // Doing a little math for fun to avoid having a separate "sum" variable 
+    // for calculating fibonacci :)
+    y = x+y;
+    x = y-x;
+    sumOfEvens += x+y % 2 ? 0 : x+y;
   }
 
   printf("%d\n", sumOfEvens);

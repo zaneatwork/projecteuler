@@ -10,7 +10,7 @@ long findSumOfPrimesUpTo(int maxValue) {
 
   for (int i = 2; i <= sqrt(maxValue); i++) {
     if (isPrime[i]) {
-      for (int multiple = pow(i, 2); multiple < maxValue; multiple += i) {
+      for (int multiple = pow(i, 2); isPrime[i] && multiple < maxValue; multiple += i) {
         isPrime[multiple] = 0;
       }
     }

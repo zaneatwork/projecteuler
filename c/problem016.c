@@ -1,4 +1,4 @@
-/*
+/*  
 * 2^15 = 32768 and the sum of its digits is 3+2+7+6+8 = 26
 * What is the sum of the digits of the number 2^1000?
 */
@@ -8,8 +8,7 @@
 #include <string.h>
 #include <math.h>
 
-int main()
-{   
+int main() {   
   const int ARRAY_LEN = 350;
   const int POWER = 1000;
 

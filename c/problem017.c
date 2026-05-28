@@ -20,7 +20,8 @@ int main() {
   for (int i = 1; i <= 1000; i++) {
     int remainder = i;
     if (remainder == 1000) {
-      offset += snprintf(result + offset, sizeof(result) - offset, "thousand");
+      offset +=
+          snprintf(result + offset, sizeof(result) - offset, "onethousand");
       remainder %= 1000;
     }
 
@@ -43,10 +44,10 @@ int main() {
       offset += snprintf(result + offset, sizeof(result) - offset, "%s",
                          teens(remainder));
       remainder = 0;
+    } else {
+      offset += snprintf(result + offset, sizeof(result) - offset, "%s",
+                         ones(remainder));
     }
-
-    offset += snprintf(result + offset, sizeof(result) - offset, "%s",
-                       ones(remainder));
   }
 
   printf("%i\n", offset);
@@ -113,7 +114,7 @@ char *tens(int num) {
   case 3:
     return "thirty";
   case 4:
-    return "fourty";
+    return "forty";
   case 5:
     return "fifty";
   case 6:

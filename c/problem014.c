@@ -38,7 +38,7 @@ int main() {
     }
   }
 
-  printf("Longest sequence comes from: %lu, %lu elements\n", bestVal, maxCount);
+  printf("%lu\n", bestVal);
 
   return 0;
 }

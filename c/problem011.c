@@ -3,9 +3,7 @@
 
 #include <stdio.h>
 
-#ifndef max
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-#endif
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 int GRID_SIZE = 400;
 char CHAR_GRID[] =
@@ -41,7 +39,7 @@ int maxAdjacentProductAtIndex(int grid[], int gridSize, int i) {
   // Find top-to-bottom product if we can
   if (i < gridSize - 60) {
     maxAdjacentProduct =
-        max(maxAdjacentProduct,
+        MAX(maxAdjacentProduct,
             grid[i] * grid[i + 20] * grid[i + 40] * grid[i + 60]);
   }
 
@@ -49,14 +47,14 @@ int maxAdjacentProductAtIndex(int grid[], int gridSize, int i) {
   if (i < gridSize - 63 &&
       (i % 20 == 0 && i % 20 % 17 > 0 && i % 20 % 18 > 0 && i % 20 % 19 > 0)) {
     maxAdjacentProduct =
-        max(maxAdjacentProduct,
+        MAX(maxAdjacentProduct,
             grid[i] * grid[i + 21] * grid[i + 42] * grid[i + 63]);
   }
 
   // Find right-to-left diagonal product if we can
   if (i < gridSize - 57 && !(i % 20 == 0 || i % 20 == 1 || i % 20 == 2)) {
     maxAdjacentProduct =
-        max(maxAdjacentProduct,
+        MAX(maxAdjacentProduct,
             grid[i] * grid[i + 19] * grid[i + 38] * grid[i + 57]);
   }
 
@@ -70,8 +68,8 @@ int main() {
   }
 
   int maxProd = 0;
-  for (int i; i < GRID_SIZE; i++) {
-    maxProd = max(maxProd, maxAdjacentProductAtIndex(numberGrid, GRID_SIZE, i));
+  for (int i = 0; i < GRID_SIZE; i++) {
+    maxProd = MAX(maxProd, maxAdjacentProductAtIndex(numberGrid, GRID_SIZE, i));
   }
   printf("%d\n", maxProd);
 }

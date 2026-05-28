@@ -15,14 +15,13 @@
  * requires a clever method! ;o)
  */
 
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define NUM_ROWS 15
+#define NUM_COLS 15
+
 #include <stdio.h>
 
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
-
 int main() {
-  const int NUM_ROWS = 15;
-  const int NUM_COLS = 15;
-
   int table[NUM_ROWS][NUM_COLS] = {
       {75},
       {95, 64},

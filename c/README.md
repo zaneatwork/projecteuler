@@ -3,6 +3,12 @@
 Compile and run an individual problem with:
 
 ```
-clang problem001.c
+cc problem001.c -lm
 ./a.out
+```
+
+Run all tests with:
+
+```
+./tests.sh
 ```

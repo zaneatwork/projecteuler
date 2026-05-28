@@ -40,6 +40,6 @@ int main()
     }
   }
 
-  printf("%i", monthsStartingWithMon);
+  printf("%i\n", monthsStartingWithMon);
   return 0;
 }

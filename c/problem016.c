@@ -6,13 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+
+#define ARRAY_LEN 350
+#define POWER 1000
 
 int main() {   
-  const int ARRAY_LEN = 350;
-  const int POWER = 1000;
-
   int result[ARRAY_LEN] = {0};
+
   result[0] = 1; // starting at 2^0 to make any debugging easier.
 
   for (int n = 1; n <= POWER; n++) {

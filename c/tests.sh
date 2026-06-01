@@ -21,6 +21,7 @@ declare -A ANSWERS=(
   [18]="1074"
   [19]="171"
   [20]="648"
+  [21]="31626"
 )
 
 ms() { awk "BEGIN {printf \"%d\", $EPOCHREALTIME * 1000}"; }

@@ -6,17 +6,22 @@
 long findSumOfPrimesUpTo(int maxValue) {
   long primeSum = 0;
   int isPrime[maxValue];
-  for (int i = 0; i < maxValue; i++) {isPrime[i] = 1;}
+  for (int i = 0; i < maxValue; i++) {
+    isPrime[i] = 1;
+  }
 
   for (int i = 2; i <= sqrt(maxValue); i++) {
     if (isPrime[i]) {
-      for (int multiple = pow(i, 2); isPrime[i] && multiple < maxValue; multiple += i) {
+      for (int multiple = pow(i, 2); isPrime[i] && multiple < maxValue;
+           multiple += i) {
         isPrime[multiple] = 0;
       }
     }
   }
 
-  for (int i = 2; i < maxValue; i++) { primeSum += isPrime[i] ? i : 0; }
+  for (int i = 2; i < maxValue; i++) {
+    primeSum += isPrime[i] ? i : 0;
+  }
 
   return primeSum;
 }

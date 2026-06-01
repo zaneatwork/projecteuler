@@ -8,11 +8,11 @@ int main() {
   unsigned long sumOfEvens = 2;
 
   while (y <= 4000000) {
-    // Doing a little math for fun to avoid having a separate "sum" variable 
+    // Doing a little math for fun to avoid having a separate "sum" variable
     // for calculating fibonacci :)
-    y = x+y;
-    x = y-x;
-    sumOfEvens += (x+y) % 2 ? 0 : x+y;
+    y = x + y;
+    x = y - x;
+    sumOfEvens += (x + y) % 2 ? 0 : x + y;
   }
 
   printf("%lu\n", sumOfEvens);

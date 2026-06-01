@@ -6,7 +6,9 @@
 // Using the sieve of eratosthenes
 int findNthPrimeUpTo(int n, int maxValue) {
   int isPrime[maxValue];
-  for (int i = 0; i < maxValue; i++) { isPrime[i] = 1; }
+  for (int i = 0; i < maxValue; i++) {
+    isPrime[i] = 1;
+  }
 
   for (int i = 2; i <= sqrt(maxValue); i++) {
     if (isPrime[i]) {
